@@ -26,7 +26,7 @@ export async function getHolidaysForYear(year: number): Promise<Set<string>> {
     throw new Error(`Falha ao consultar feriados (status ${response.status})`);
   }
 
-  const data: NagerHoliday[] = await response.json();
+  const data = (await response.json()) as NagerHoliday[];
   const dates = new Set(data.map((h) => h.date));
 
   holidayCache.set(year, dates);
