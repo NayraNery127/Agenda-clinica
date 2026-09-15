@@ -48,8 +48,8 @@ export default function App() {
         setMessage(data.error ?? 'Não foi possível agendar.');
         return;
       }
+      await checkAvailability(); // atualiza a lista removendo o horário ocupado
       setMessage(`Agendamento confirmado para ${date} às ${time}.`);
-      checkAvailability(); // atualiza a lista removendo o horário ocupado
     } catch {
       setMessage('Erro ao criar agendamento.');
     }
