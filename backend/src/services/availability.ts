@@ -19,6 +19,11 @@ export function isWeekend(dateStr: string): boolean {
   return day === 0 || day === 6; // domingo = 0, sábado = 6
 }
 
+export function isPastDate(dateStr: string): boolean {
+  const todayStr = new Date().toISOString().split('T')[0]; // YYYY-MM-DD em UTC
+  return dateStr < todayStr;
+}
+
 function buildAllSlots(): string[] {
   const slots: string[] = [];
   for (let hour = OPENING_HOUR; hour < CLOSING_HOUR; hour++) {
@@ -30,11 +35,15 @@ function buildAllSlots(): string[] {
 export interface AvailabilityResult {
   date: string;
   blocked: boolean;
-  reason?: 'weekend' | 'holiday';
+  reason?: 'weekend' | 'holiday' | 'past';
   availableSlots: string[];
 }
 
 export async function getAvailability(dateStr: string): Promise<AvailabilityResult> {
+  if (isPastDate(dateStr)) {
+    return { date: dateStr, blocked: true, reason: 'past', availableSlots: [] };
+  }
+
   if (isWeekend(dateStr)) {
     return { date: dateStr, blocked: true, reason: 'weekend', availableSlots: [] };
   }
@@ -49,7 +58,7 @@ export async function getAvailability(dateStr: string): Promise<AvailabilityResu
     where: { date: dateStr },
     select: { time: true },
   });
-  const takenSet = new Set(taken.map((t) => t.time));
+  const takenSet = new Set(taken.map((t: { time: string }) => t.time));
 
   const availableSlots = allSlots.filter((slot) => !takenSet.has(slot));
 

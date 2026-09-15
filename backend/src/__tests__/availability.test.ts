@@ -1,4 +1,4 @@
-import { isWeekend } from '../services/availability';
+import { isWeekend, isPastDate } from '../services/availability';
 
 describe('isWeekend', () => {
   it('identifica sábado como fim de semana', () => {
@@ -14,5 +14,15 @@ describe('isWeekend', () => {
   it('não bloqueia dia de semana comum', () => {
     // 2026-02-10 é uma terça-feira
     expect(isWeekend('2026-02-10')).toBe(false);
+  });
+});
+
+describe('isPastDate', () => {
+  it('identifica uma data claramente passada', () => {
+    expect(isPastDate('2003-08-19')).toBe(true);
+  });
+
+  it('não bloqueia uma data futura', () => {
+    expect(isPastDate('2099-01-01')).toBe(false);
   });
 });

@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '../lib/prisma';
-import { getAvailability, isWeekend } from '../services/availability';
+import { getAvailability, isWeekend, isPastDate } from '../services/availability';
 import { isHoliday } from '../services/holidays';
 
 const router = Router();
@@ -45,6 +45,10 @@ router.post('/appointments', async (req: Request, res: Response) => {
   }
   if (typeof time !== 'string' || !TIME_REGEX.test(time)) {
     return res.status(400).json({ error: '"time" inválido. Use o formato HH:mm.' });
+  }
+
+  if (isPastDate(date)) {
+    return res.status(409).json({ error: 'Não é possível agendar em uma data que já passou.' });
   }
 
   if (isWeekend(date)) {
