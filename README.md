@@ -1,6 +1,7 @@
-# Sistema de Agendamento Inteligente
+# Agenda Clínica
 
-Teste técnico — Estagiário Full Stack.
+Sistema de agendamento inteligente para clínicas — projeto pessoal desenvolvido para
+praticar arquitetura full stack (React + Node.js + PostgreSQL) resolvendo um problema real.
 
 ## Contexto
 
