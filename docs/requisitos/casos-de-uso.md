@@ -57,6 +57,8 @@
 
 ## UC01 — Consultar horários disponíveis
 
+> Requisitos relacionados: [RF01-RF05](/requisitos/requisitos-funcionais.md)
+
 | | |
 |---|---|
 | **Ator** | Paciente |
@@ -82,6 +84,8 @@
 ---
 
 ## UC02 — Criar agendamento
+
+> Requisitos relacionados: [RF06-RF09](/requisitos/requisitos-funcionais.md)
 
 | | |
 |---|---|
@@ -121,6 +125,8 @@
 
 ## UC03 — Listar agendamentos
 
+> Requisitos relacionados: [RF10-RF11](/requisitos/requisitos-funcionais.md)
+
 | | |
 |---|---|
 | **Ator** | Recepção da clínica (uso indireto, via API) |
@@ -136,6 +142,8 @@
 ---
 
 ## UC04 — Cancelar agendamento *(backlog, não implementado)*
+
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
 
 | | |
 |---|---|
@@ -153,6 +161,8 @@
 
 ## UC05 — Gerenciar agenda via painel administrativo *(backlog, não implementado)*
 
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
+
 | | |
 |---|---|
 | **Ator** | Recepção da clínica |
@@ -168,6 +178,8 @@
 ---
 
 ## UC06 — Notificar paciente sobre confirmação *(backlog, não implementado)*
+
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
 
 | | |
 |---|---|
@@ -191,6 +203,8 @@
 
 ## UC07 — Autenticar usuário *(backlog, não implementado)*
 
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
+
 | | |
 |---|---|
 | **Ator** | Paciente ou Recepção |
@@ -211,6 +225,8 @@
 ---
 
 ## UC08 — Selecionar profissional/especialidade *(backlog, não implementado)*
+
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
 
 | | |
 |---|---|
@@ -278,3 +294,4 @@
 |---|---|---|---|
 | 2026-09-15 | 1.0 | Criação dos casos de uso UC01, UC02 e UC03 com diagramas | Nayra |
 | 2026-09-16 | 2.0 | Adição dos casos de uso UC04 a UC08 (itens de backlog, não implementados) | Nayra |
+| 2026-09-16 | 2.1 | Adiciona hyperlinks de rastreabilidade reversa (UC → RF e UC de backlog → priorização) | Nayra |

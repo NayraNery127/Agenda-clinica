@@ -40,9 +40,11 @@ Causas associadas:
 ## 1.4. Desafios do projeto
 
 - **Desafio de confiabilidade**: a validação de feriados e finais de semana precisa
-  ser automática e não depender de a recepção lembrar da data certa.
+  ser automática e não depender de a recepção lembrar da data certa. Ver
+  [RN03 e RN04](/requisitos/lista-de-itens-de-trabalho.md).
 - **Desafio de concorrência**: dois pacientes não podem conseguir marcar o mesmo
-  horário ao mesmo tempo.
+  horário ao mesmo tempo. Ver [RN06](/requisitos/lista-de-itens-de-trabalho.md) e
+  [RNF05](/requisitos/requisitos-nao-funcionais.md).
 - **Desafio de simplicidade de uso**: o fluxo de agendamento precisa ser mais rápido
   que mandar mensagem e esperar resposta — senão não há ganho real para o paciente.
 
@@ -51,3 +53,4 @@ Causas associadas:
 | Data | Versão | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 2026-09-15 | 1.0 | Criação do documento, estruturação do cenário atual e problema | Nayra |
+| 2026-09-16 | 1.1 | Adiciona hyperlinks dos desafios para regras de negócio e RNFs relacionados | Nayra |
