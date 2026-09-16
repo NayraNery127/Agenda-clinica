@@ -38,6 +38,10 @@ marcados como "backlog, não implementado".
 | UC06 | Notificação por e-mail/SMS/WhatsApp | V | V | -- | -- | 2 |
 | UC07 | Autenticação completa de usuário | -- | V | -- | -- | 1 |
 | UC08 | Múltiplos profissionais/especialidades | -- | -- | -- | -- | 0 |
+| UC09 | Remarcar agendamento | -- | V | -- | -- | 1 |
+| UC10 | Consultar histórico do paciente | -- | -- | -- | -- | 0 |
+| UC11 | Configurar horário de funcionamento | -- | V | -- | -- | 1 |
+| UC12 | Bloquear datas manualmente | V | V | -- | -- | 2 |
 
 ## 7.4. Cálculo de Prioridade
 
@@ -56,6 +60,10 @@ Valor Final = Peso - CT (Complexidade Técnica)
 | UC06 | Notificação por e-mail/SMS/WhatsApp | 2 | 6 | 3 | 3 | Could Have | Quadrante 4 | -- |
 | UC07 | Autenticação completa de usuário | 1 | 3 | 4 | -1 | Won't Have (por agora) | Quadrante 4 | -- |
 | UC08 | Múltiplos profissionais/especialidades | 0 | 0 | 4 | -4 | Won't Have (por agora) | Quadrante 4 | -- |
+| UC09 | Remarcar agendamento | 1 | 3 | 3 | 0 | Could Have | Quadrante 4 | -- |
+| UC10 | Consultar histórico do paciente | 0 | 0 | 2 | -2 | Won't Have (por agora) | Quadrante 3 | -- |
+| UC11 | Configurar horário de funcionamento | 1 | 3 | 3 | 0 | Could Have | Quadrante 4 | -- |
+| UC12 | Bloquear datas manualmente | 2 | 6 | 2 | 4 | Should Have | Quadrante 3 | -- |
 
 **Nota sobre consistência:** itens fora do MVP foram mantidos nos quadrantes de baixo
 valor mesmo quando seu Peso numérico se aproxima do de itens do MVP (ex.: Notificação,
@@ -92,10 +100,10 @@ sozinhos. A pontuação é um apoio à decisão, não um substituto dela.
   <tr>
     <td style="border:1px solid #cbd5e1; padding:8px; font-weight:bold;">Baixo Valor</td>
     <td style="border:2px solid #ca8a04; background:#fef9c3; padding:12px;">
-      <strong>Quadrante 3</strong><br>Cancelamento<br>Painel administrativo
+      <strong>Quadrante 3</strong><br>Cancelamento<br>Painel administrativo<br>Bloquear datas manualmente<br>Consultar histórico do paciente
     </td>
     <td style="border:2px solid #dc2626; background:#fecaca; padding:12px;">
-      <strong>Quadrante 4</strong><br>Notificação · Autenticação · Multiperfil
+      <strong>Quadrante 4</strong><br>Notificação · Autenticação · Multiperfil<br>Remarcar · Configurar horário
     </td>
   </tr>
 </table>
@@ -142,3 +150,4 @@ Ver também: [4. Requisitos Funcionais](/requisitos/requisitos-funcionais.md),
 | 2026-09-16 | 2.1 | Atribuição de IDs (UC04-UC08) aos itens de backlog, antes sem identificação | Nayra |
 | 2026-09-16 | 2.2 | Atualização da referência: UC04-UC08 agora têm casos de uso completos na seção 6 | Nayra |
 | 2026-09-16 | 2.3 | Adiciona rastreabilidade completa RF-UC-RNF-RN (movida de Requisitos Funcionais) | Nayra |
+| 2026-09-16 | 2.4 | Adiciona UC09-UC12 ao backlog nas tabelas de priorização e na matriz visual | Nayra |

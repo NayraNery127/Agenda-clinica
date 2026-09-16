@@ -69,6 +69,8 @@
   <!-- Conector entre as duas fronteiras (indica relação de backlog) -->
   <line x1="520" y1="210" x2="560" y2="210" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,3"/>
 
+  <text x="740" y="390" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#94a3b8" font-style="italic">+ UC09-UC12 (ver lista completa)</text>
+
   <defs>
     <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#94a3b8"/>
@@ -79,9 +81,9 @@
 **Legenda:** 🔵 azul = casos de uso do paciente · 🟢 verde = caso de uso da recepção (uso indireto via API) · ⬜ cinza tracejado = backlog, não implementado · linha tracejada entre casos de uso = dependência («include»)
 
 Associações de ator para os itens de backlog seguem o mesmo padrão dos já
-implementados (Paciente → UC04, UC06, UC08; Recepção → UC05, UC07) e foram
-omitidas do diagrama para não sobrecarregar a leitura visual — estão detalhadas
-na tabela da seção [7.7](/requisitos/lista-de-itens-de-trabalho.md).
+implementados e foram omitidas do diagrama para não sobrecarregar a leitura
+visual (o backlog já tem 9 itens — UC04 a UC12) — estão detalhadas na tabela da
+seção [7.7](/requisitos/lista-de-itens-de-trabalho.md).
 
 ## UC01 — Consultar horários disponíveis
 
@@ -271,6 +273,94 @@ na tabela da seção [7.7](/requisitos/lista-de-itens-de-trabalho.md).
 
 ---
 
+## UC09 — Remarcar agendamento *(backlog, não implementado)*
+
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
+
+| | |
+|---|---|
+| **Ator** | Paciente |
+| **Pré-condição** | Agendamento existente e ainda não realizado |
+| **Pós-condição** | Agendamento movido para um novo horário; o horário antigo é liberado |
+
+**Fluxo principal**
+
+1. O paciente localiza o agendamento atual.
+2. O paciente escolhe uma nova data/horário disponível.
+3. O sistema libera o horário antigo e cria o novo, validando a disponibilidade
+   do novo horário exatamente como em UC02.
+
+**Fluxo alternativo A1 — novo horário indisponível**
+
+- 3a. Se o novo horário já estiver ocupado, o sistema rejeita a remarcação e
+  mantém o agendamento original intacto (a liberação do horário antigo só
+  ocorre após a confirmação do novo).
+
+---
+
+## UC10 — Consultar histórico de agendamentos do paciente *(backlog, não implementado)*
+
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
+
+| | |
+|---|---|
+| **Ator** | Paciente |
+| **Pré-condição** | Paciente autenticado (depende de UC07) |
+| **Pós-condição** | Lista de agendamentos passados e futuros daquele paciente exibida |
+
+**Fluxo principal**
+
+1. O paciente acessa "Meus agendamentos".
+2. O sistema filtra os agendamentos pela identidade do paciente (diferente de
+   UC03, que lista por data, não por pessoa).
+3. O sistema exibe agendamentos passados e futuros separadamente.
+
+---
+
+## UC11 — Configurar horário de funcionamento *(backlog, não implementado)*
+
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
+
+| | |
+|---|---|
+| **Ator** | Recepção/Gestão da clínica |
+| **Pré-condição** | Nenhuma |
+| **Pós-condição** | Novo intervalo de funcionamento aplicado ao cálculo de disponibilidade |
+
+**Fluxo principal**
+
+1. A recepção define um novo horário de funcionamento (ex: 07:00 às 20:00),
+   substituindo o intervalo fixo de 08:00-18:00 hoje embutido no código.
+2. O sistema recalcula os horários disponíveis (UC01) com base no novo intervalo.
+
+**Observação**: hoje o horário de funcionamento é uma constante fixa no backend
+(`OPENING_HOUR` / `CLOSING_HOUR`), não um dado configurável — esse UC formaliza a
+necessidade de torná-lo configurável.
+
+---
+
+## UC12 — Bloquear datas manualmente *(backlog, não implementado)*
+
+> Priorização: [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
+
+| | |
+|---|---|
+| **Ator** | Recepção/Gestão da clínica |
+| **Pré-condição** | Nenhuma |
+| **Pós-condição** | Data(s) marcadas como indisponíveis, além dos feriados nacionais |
+
+**Fluxo principal**
+
+1. A recepção seleciona uma data ou intervalo de datas (ex: férias coletivas,
+   reforma, evento interno).
+2. O sistema passa a tratar essas datas como bloqueadas, com o mesmo efeito de
+   um feriado nacional (UC01 as retorna como indisponíveis).
+
+**Observação**: complementa RN03 (bloqueio de feriado), que hoje só cobre
+feriados vindos da API pública — não bloqueios definidos pela própria clínica.
+
+---
+
 ## Diagrama de Estados — ciclo de uma solicitação de agendamento
 
 <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
@@ -323,3 +413,4 @@ na tabela da seção [7.7](/requisitos/lista-de-itens-de-trabalho.md).
 | 2026-09-15 | 1.0 | Criação dos casos de uso UC01, UC02 e UC03 com diagramas | Nayra |
 | 2026-09-16 | 2.0 | Adição dos casos de uso UC04 a UC08 (itens de backlog, não implementados) | Nayra |
 | 2026-09-16 | 2.1 | Adiciona hyperlinks de rastreabilidade reversa (UC → RF e UC de backlog → priorização) | Nayra |
+| 2026-09-16 | 2.2 | Adiciona casos de uso UC09-UC12 (backlog); atualiza diagrama de casos de uso para incluir os 9 itens de backlog | Nayra |
