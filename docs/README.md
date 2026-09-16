@@ -4,7 +4,7 @@ Sistema de agendamento inteligente para clínicas — projeto pessoal full stack
 com o mesmo rigor de Engenharia de Requisitos aplicado em projetos acadêmicos, mas aqui
 aplicado a um sistema real, construído do zero.
 
-## Por que este projeto existe
+## Contexto do Agenda Clínica
 
 Uma clínica recebe dezenas de mensagens por dia no WhatsApp perguntando por horários
 disponíveis. O atendimento manual desse fluxo consome tempo da equipe e gera erros de
