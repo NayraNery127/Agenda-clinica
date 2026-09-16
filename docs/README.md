@@ -20,6 +20,15 @@ implementação, na mesma ordem que um projeto de Engenharia de Software real se
 - **Arquitetura** — decisões técnicas e como as camadas se comunicam
 - **Plano de Commits** — o histórico de decisões, commit a commit
 
+## Metodologia e inspiração
+
+A estrutura de documentação de requisitos (cenário atual, stakeholders, MVP, RFs/RNFs,
+casos de uso) segue o mesmo padrão aplicado no projeto acadêmico **EcoQuest**
+(Engenharia de Requisitos, UnB/FCTE). A organização do site de documentação via
+GitHub Pages, com uma seção dedicada de arquitetura, foi inspirada na documentação
+do projeto **Othala** (MDS, UnB/FCTE). Aqui, essas duas práticas foram combinadas e
+aplicadas a um sistema real construído do zero, fora do contexto acadêmico.
+
 ## Repositório e execução
 
 Código-fonte completo, com instruções de instalação e execução via Docker:
