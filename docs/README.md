@@ -18,7 +18,6 @@ implementação, na mesma ordem que um projeto de Engenharia de Software real se
 - **Requisitos** — cenário atual, stakeholders, escopo do MVP, requisitos funcionais e
   não-funcionais, casos de uso
 - **Arquitetura** — decisões técnicas e como as camadas se comunicam
-- **Plano de Commits** — o histórico de decisões, commit a commit
 
 ## Metodologia e inspiração
 
