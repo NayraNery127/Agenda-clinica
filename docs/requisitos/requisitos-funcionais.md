@@ -16,13 +16,20 @@
 
 ## Rastreabilidade
 
+| Requisito | Caso de Uso relacionado |
+|---|---|
+| RF01, RF02, RF03, RF04, RF05 | UC01 — Consultar horários disponíveis |
+| RF06, RF07, RF08, RF09 | UC02 — Criar agendamento |
+| RF10, RF11 | UC03 — Listar agendamentos |
+
 RF02–RF05 e RF09 derivam diretamente do problema central descrito em
-[Cenário Atual e Negócio](cenario-atual.md) (dependência de checagem manual de
-feriados/finais de semana). RF08 deriva do desafio de concorrência listado no
-mesmo documento.
+[1. Cenário Atual e Negócio](/requisitos/cenario-atual.md) (dependência de checagem
+manual de feriados/finais de semana). RF08 deriva do desafio de concorrência listado
+no mesmo documento.
 
 ## Histórico de Versão
 
 | Data | Versão | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 2026-09-15 | 1.0 | Levantamento inicial dos requisitos funcionais | Nayra |
+| 2026-09-16 | 1.1 | Adiciona rastreabilidade explícita com Casos de Uso e corrige link relativo quebrado | Nayra |
