@@ -105,6 +105,34 @@ sozinhos. A pontuação é um apoio à decisão, não um substituto dela.
 Os quadrantes 1 e 2 formam o **MVP**. Os quadrantes 3 e 4 são os itens listados como
 fora do MVP em [3. MVP e Escopo](/requisitos/mvp.md).
 
+## 7.7. Rastreabilidade RF-UC-RNF-RN
+
+| ID | Nome | ID UC | Objetivo UC | RNFs Relacionados | RNs Relacionadas |
+|---|---|---|---|---|---|
+| RF01 | Consultar disponibilidade | UC01 | Mostrar horários livres numa data | RNF01, RNF02, RNF03, RNF06 | RN03, RN04, RN05 |
+| RF02 | Consultar feriados | UC01 | Verificar se a data é feriado nacional | RNF03, RNF06 | RN03 |
+| RF03 | Bloquear feriado | UC01 | Impedir agendamento em feriado | RNF03, RNF06 | RN03 |
+| RF04 | Bloquear fim de semana | UC01 | Impedir agendamento em sábado/domingo | RNF02, RNF06 | RN04 |
+| RF05 | Bloquear data passada | UC01 | Impedir agendamento em data já ocorrida | RNF02, RNF06 | RN05 |
+| RF06 | Informar paciente | UC02 | Capturar identificação de quem agenda | RNF06, RNF07 | RN02 |
+| RF07 | Criar agendamento | UC02 | Persistir agendamento em horário livre | RNF06, RNF07 | RN01, RN02 |
+| RF08 | Impedir conflito de horário | UC02 | Bloquear dois agendamentos no mesmo horário | RNF06 | RN06 |
+| RF09 | Revalidar no backend | UC02 | Repetir toda validação, ignorando o frontend | RNF06 | RN03, RN04, RN05, RN06 |
+| RF10 | Listar agendamentos | UC03 | Retornar todos os agendamentos | RNF01, RNF06 | RN02 |
+| RF11 | Filtrar por data | UC03 | Restringir listagem a uma data | RNF01, RNF06 | RN02 |
+
+Todas as linhas têm pelo menos uma RNF relacionada porque **RNF06 (tipagem
+ponta a ponta)** se aplica a toda a base de código, sem exceção. Já **RN02
+(duração de 1h por consulta)** aparece em RF06/RF10/RF11 porque a própria noção
+de "horário" e "agendamento" manipulada por esses requisitos é definida por essa
+regra — mesmo quando o requisito não a aplica diretamente.
+
+---
+
+Ver também: [4. Requisitos Funcionais](/requisitos/requisitos-funcionais.md),
+[5. Requisitos Não-Funcionais](/requisitos/requisitos-nao-funcionais.md) e
+[6. Casos de Uso](/requisitos/casos-de-uso.md).
+
 ## Histórico de Versão
 
 | Data | Versão | Descrição da Alteração | Autor(a) |
@@ -113,3 +141,4 @@ fora do MVP em [3. MVP e Escopo](/requisitos/mvp.md).
 | 2026-09-16 | 2.0 | Unificação com a Matriz de Esforço em uma única página; adição da tabela de justificativa de valor (C1-C4); matriz reconstruída como tabela HTML colorida | Nayra |
 | 2026-09-16 | 2.1 | Atribuição de IDs (UC04-UC08) aos itens de backlog, antes sem identificação | Nayra |
 | 2026-09-16 | 2.2 | Atualização da referência: UC04-UC08 agora têm casos de uso completos na seção 6 | Nayra |
+| 2026-09-16 | 2.3 | Adiciona rastreabilidade completa RF-UC-RNF-RN (movida de Requisitos Funcionais) | Nayra |
