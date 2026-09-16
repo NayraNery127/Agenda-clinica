@@ -10,15 +10,16 @@
   - [4. Requisitos Funcionais](/requisitos/requisitos-funcionais.md)
   - [5. Requisitos Não-Funcionais](/requisitos/requisitos-nao-funcionais.md)
   - [6. Casos de Uso](/requisitos/casos-de-uso.md)
-  - [7. Matriz de Esforço](/requisitos/matriz-de-esforco.md)
+  - [7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md)
+  - [8. Matriz de Esforço](/requisitos/matriz-de-esforco.md)
 
 - Arquitetura
 
-  - [8. Visão Geral](/arquitetura/README.md)
+  - [9. Visão Geral](/arquitetura/README.md)
 
 - Acompanhamento
 
-  - [9. Lições Aprendidas](/acompanhamento/licoes-aprendidas.md)
-  - [10. Cronograma e Entregas](/acompanhamento/cronograma.md)
-  - [11. Evidências de Software](/acompanhamento/evidencias.md)
-  - [12. Referências Bibliográficas](/acompanhamento/referencias.md)
+  - [10. Lições Aprendidas](/acompanhamento/licoes-aprendidas.md)
+  - [11. Cronograma e Entregas](/acompanhamento/cronograma.md)
+  - [12. Evidências de Software](/acompanhamento/evidencias.md)
+  - [13. Referências Bibliográficas](/acompanhamento/referencias.md)
