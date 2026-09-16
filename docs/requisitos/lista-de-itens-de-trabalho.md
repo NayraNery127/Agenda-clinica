@@ -43,8 +43,10 @@ Peso e CT são atribuídos em escala de 1 a 10. Quanto maior o VF, maior a prior
 | Quadrante 3 | Baixo valor e baixa complexidade |
 | Quadrante 4 | Baixo valor e alta complexidade |
 
-A visualização completa em forma de matriz está em
-[8. Matriz de Esforço](matriz-de-esforco.md).
+---
+
+Ver também: [8. Matriz de Esforço](/requisitos/matriz-de-esforco.md) (visualização
+gráfica desta priorização).
 
 ## Histórico de Versão
 
