@@ -53,6 +53,8 @@
   </defs>
 </svg>
 
+**Legenda:** 🔵 azul = casos de uso do paciente · 🟢 verde = caso de uso da recepção (uso indireto via API) · linha tracejada = dependência entre casos de uso
+
 ## UC01 — Consultar horários disponíveis
 
 | | |
@@ -175,3 +177,5 @@
   <text x="565" y="200" font-family="sans-serif" font-size="9" fill="#64748b">tenta agendar</text>
   <text x="530" y="212" font-family="sans-serif" font-size="9" fill="#64748b">tenta outro horário</text>
 </svg>
+
+**Legenda:** 🔵 azul = estados intermediários do fluxo · 🟢 verde = estado de sucesso · 🔴 vermelho = estados de bloqueio/erro · linha tracejada = tentativa de recuperação

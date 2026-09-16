@@ -41,6 +41,8 @@
   <text x="405" y="200" font-family="sans-serif" font-size="9" fill="#64748b">constrói e mantém</text>
 </svg>
 
+**Legenda:** 🟢 verde = usuários diretos do sistema · 🟡 amarelo = patrocinadores/mantenedores
+
 | Stakeholder | Relação com a solução | Interesse principal | Influência |
 |---|---|---|---|
 | Paciente | Usuário final | Agendar consulta de forma rápida, sem esperar resposta manual | Alta |

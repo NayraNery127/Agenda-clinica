@@ -45,6 +45,8 @@
   <text x="565" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#64748b">valida e persiste</text>
 </svg>
 
+**Legenda:** 🔵 azul = camadas da aplicação (frontend/backend) · 🟢 verde = serviço externo · 🔴 vermelho = banco de dados
+
 ## Camadas
 
 | Camada | Tecnologia | Justificativa |
