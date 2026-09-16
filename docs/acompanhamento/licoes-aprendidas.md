@@ -1,4 +1,4 @@
-# 10. Lições Aprendidas
+# 9. Lições Aprendidas
 
 Registro honesto dos problemas reais encontrados durante o desenvolvimento — e como
 foram resolvidos. Diferente de um relatório polido, o valor aqui está em documentar

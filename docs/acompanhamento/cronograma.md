@@ -1,4 +1,4 @@
-# 11. Cronograma e Entregas
+# 10. Cronograma e Entregas
 
 Linha do tempo das fases do projeto, do levantamento do problema até a publicação
 da documentação.
