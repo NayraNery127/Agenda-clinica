@@ -24,16 +24,20 @@ Cada item foi avaliado contra 4 critérios (V = atende, -- = não atende):
 
 ## 7.3. Justificativa de Valor Atribuído
 
+Os itens UC04 a UC08 fazem parte do backlog (fora do MVP atual) e por isso não têm
+um caso de uso detalhado na seção [6. Casos de Uso](/requisitos/casos-de-uso.md) —
+apenas o ID e a pontuação de priorização, para efeito de comparação.
+
 | ID | Nome | C1 | C2 | C3 | C4 | VF (critérios atendidos) |
 |---|---|---|---|---|---|---|
 | UC01 | Consultar horários disponíveis | V | V | V | V | 4 |
 | UC02 | Criar agendamento | V | V | -- | V | 3 |
 | UC03 | Listar agendamentos | -- | V | -- | V | 2 |
-| — | Cancelamento de agendamento | -- | V | -- | -- | 1 |
-| — | Painel administrativo simples | -- | V | -- | -- | 1 |
-| — | Notificação por e-mail/SMS/WhatsApp | V | V | -- | -- | 2 |
-| — | Autenticação completa de usuário | -- | V | -- | -- | 1 |
-| — | Múltiplos profissionais/especialidades | -- | -- | -- | -- | 0 |
+| UC04 | Cancelamento de agendamento | -- | V | -- | -- | 1 |
+| UC05 | Painel administrativo simples | -- | V | -- | -- | 1 |
+| UC06 | Notificação por e-mail/SMS/WhatsApp | V | V | -- | -- | 2 |
+| UC07 | Autenticação completa de usuário | -- | V | -- | -- | 1 |
+| UC08 | Múltiplos profissionais/especialidades | -- | -- | -- | -- | 0 |
 
 ## 7.4. Cálculo de Prioridade
 
@@ -47,11 +51,11 @@ Valor Final = Peso - CT (Complexidade Técnica)
 | UC01 | Consultar horários disponíveis | 4 | 10 | 2 | 8 | Must Have | Quadrante 1 | X |
 | UC02 | Criar agendamento | 3 | 8 | 4 | 4 | Must Have | Quadrante 2 | X |
 | UC03 | Listar agendamentos | 2 | 6 | 1 | 5 | Should Have | Quadrante 1 | X |
-| — | Cancelamento de agendamento | 1 | 3 | 2 | 1 | Could Have | Quadrante 3 | -- |
-| — | Painel administrativo simples | 1 | 3 | 2 | 1 | Could Have | Quadrante 3 | -- |
-| — | Notificação por e-mail/SMS/WhatsApp | 2 | 6 | 3 | 3 | Could Have | Quadrante 4 | -- |
-| — | Autenticação completa de usuário | 1 | 3 | 4 | -1 | Won't Have (por agora) | Quadrante 4 | -- |
-| — | Múltiplos profissionais/especialidades | 0 | 0 | 4 | -4 | Won't Have (por agora) | Quadrante 4 | -- |
+| UC04 | Cancelamento de agendamento | 1 | 3 | 2 | 1 | Could Have | Quadrante 3 | -- |
+| UC05 | Painel administrativo simples | 1 | 3 | 2 | 1 | Could Have | Quadrante 3 | -- |
+| UC06 | Notificação por e-mail/SMS/WhatsApp | 2 | 6 | 3 | 3 | Could Have | Quadrante 4 | -- |
+| UC07 | Autenticação completa de usuário | 1 | 3 | 4 | -1 | Won't Have (por agora) | Quadrante 4 | -- |
+| UC08 | Múltiplos profissionais/especialidades | 0 | 0 | 4 | -4 | Won't Have (por agora) | Quadrante 4 | -- |
 
 **Nota sobre consistência:** itens fora do MVP foram mantidos nos quadrantes de baixo
 valor mesmo quando seu Peso numérico se aproxima do de itens do MVP (ex.: Notificação,
@@ -107,3 +111,4 @@ fora do MVP em [3. MVP e Escopo](/requisitos/mvp.md).
 |---|---|---|---|
 | 2026-09-15 | 1.0 | Criação das regras de negócio e da tabela de priorização com cálculo de valor final | Nayra |
 | 2026-09-16 | 2.0 | Unificação com a Matriz de Esforço em uma única página; adição da tabela de justificativa de valor (C1-C4); matriz reconstruída como tabela HTML colorida | Nayra |
+| 2026-09-16 | 2.1 | Atribuição de IDs (UC04-UC08) aos itens de backlog, antes sem identificação | Nayra |
