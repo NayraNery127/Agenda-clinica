@@ -1,7 +1,18 @@
+<p align="center">
+  <img src="logo.png" alt="Agenda Clínica" width="96" height="96">
+</p>
+
 # Agenda Clínica
+
+[![Tests](https://github.com/NayraNery127/Agenda-clinica/actions/workflows/tests.yml/badge.svg)](https://github.com/NayraNery127/Agenda-clinica/actions/workflows/tests.yml)
 
 Sistema de agendamento inteligente para clínicas — projeto pessoal desenvolvido para
 praticar arquitetura full stack (React + Node.js + PostgreSQL) resolvendo um problema real.
+
+<!-- Demo: substitua a linha abaixo pelo GIF depois de gravar (veja instruções no fim deste README) -->
+<p align="center">
+  <img src="demo.gif" alt="Demonstração do Agenda Clínica" width="600">
+</p>
 
 ## Contexto
 
