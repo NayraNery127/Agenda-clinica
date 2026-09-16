@@ -11,7 +11,7 @@ praticar arquitetura full stack (React + Node.js + PostgreSQL) resolvendo um pro
 
 <!-- Demo: substitua a linha abaixo pelo GIF depois de gravar (veja instruções no fim deste README) -->
 <p align="center">
-  <img src="demo.gif" alt="Demonstração do Agenda Clínica" width="600">
+  <img src="demo-v2.gif" alt="Demonstração do Agenda Clínica" width="600">
 </p>
 
 ## Contexto
