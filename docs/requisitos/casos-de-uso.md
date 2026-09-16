@@ -135,6 +135,98 @@
 
 ---
 
+## UC04 — Cancelar agendamento *(backlog, não implementado)*
+
+| | |
+|---|---|
+| **Ator** | Paciente |
+| **Pré-condição** | Agendamento existente e ainda não realizado |
+| **Pós-condição** | Agendamento removido, horário liberado para outros pacientes |
+
+**Fluxo principal**
+
+1. O paciente localiza seu agendamento (por data/horário ou identificador).
+2. O paciente solicita o cancelamento.
+3. O sistema remove o agendamento e libera o horário na consulta de disponibilidade.
+
+---
+
+## UC05 — Gerenciar agenda via painel administrativo *(backlog, não implementado)*
+
+| | |
+|---|---|
+| **Ator** | Recepção da clínica |
+| **Pré-condição** | Nenhuma |
+| **Pós-condição** | Recepção visualiza e gerencia agendamentos sem depender de chamadas diretas à API |
+
+**Fluxo principal**
+
+1. A recepção acessa uma interface visual (não apenas endpoints REST).
+2. A interface exibe os agendamentos do dia/semana.
+3. A recepção pode criar, cancelar ou remarcar agendamentos manualmente.
+
+---
+
+## UC06 — Notificar paciente sobre confirmação *(backlog, não implementado)*
+
+| | |
+|---|---|
+| **Ator** | Sistema (acionado automaticamente) |
+| **Pré-condição** | Agendamento criado com sucesso (UC02) |
+| **Pós-condição** | Paciente notificado por um canal externo |
+
+**Fluxo principal**
+
+1. Após a criação do agendamento, o sistema aciona um serviço externo de
+   e-mail, SMS ou WhatsApp.
+2. O paciente recebe a confirmação fora da interface web.
+
+**Fluxo alternativo A1 — falha no envio**
+
+- 1a. Se o serviço externo falhar, o agendamento permanece válido (a notificação
+  não é uma condição para a criação), e o sistema registra a falha para nova
+  tentativa.
+
+---
+
+## UC07 — Autenticar usuário *(backlog, não implementado)*
+
+| | |
+|---|---|
+| **Ator** | Paciente ou Recepção |
+| **Pré-condição** | Usuário previamente cadastrado |
+| **Pós-condição** | Sessão autenticada, ações associadas a uma identidade verificada |
+
+**Fluxo principal**
+
+1. O usuário informa credenciais (ou usa login social).
+2. O sistema valida as credenciais.
+3. O sistema associa as ações seguintes (agendar, cancelar) a essa identidade.
+
+**Fluxo alternativo A1 — credenciais inválidas**
+
+- 2a. O sistema rejeita o acesso e informa o erro, sem revelar qual campo
+  especificamente está incorreto (prática de segurança).
+
+---
+
+## UC08 — Selecionar profissional/especialidade *(backlog, não implementado)*
+
+| | |
+|---|---|
+| **Ator** | Paciente |
+| **Pré-condição** | Clínica com mais de um profissional cadastrado |
+| **Pós-condição** | Agendamento vinculado a um profissional específico |
+
+**Fluxo principal**
+
+1. O paciente escolhe uma especialidade ou profissional antes da data.
+2. O sistema filtra a disponibilidade apenas para aquele profissional.
+3. O restante do fluxo segue igual ao UC01/UC02, mas com a disponibilidade
+   restrita ao profissional escolhido.
+
+---
+
 ## Diagrama de Estados — ciclo de uma solicitação de agendamento
 
 <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
@@ -185,3 +277,4 @@
 | Data | Versão | Descrição da Alteração | Autor(a) |
 |---|---|---|---|
 | 2026-09-15 | 1.0 | Criação dos casos de uso UC01, UC02 e UC03 com diagramas | Nayra |
+| 2026-09-16 | 2.0 | Adição dos casos de uso UC04 a UC08 (itens de backlog, não implementados) | Nayra |

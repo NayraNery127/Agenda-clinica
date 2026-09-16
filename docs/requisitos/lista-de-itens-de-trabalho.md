@@ -24,9 +24,9 @@ Cada item foi avaliado contra 4 critérios (V = atende, -- = não atende):
 
 ## 7.3. Justificativa de Valor Atribuído
 
-Os itens UC04 a UC08 fazem parte do backlog (fora do MVP atual) e por isso não têm
-um caso de uso detalhado na seção [6. Casos de Uso](/requisitos/casos-de-uso.md) —
-apenas o ID e a pontuação de priorização, para efeito de comparação.
+Os itens UC04 a UC08 fazem parte do backlog (fora do MVP atual). Seus casos de uso
+completos estão documentados em [6. Casos de Uso](/requisitos/casos-de-uso.md),
+marcados como "backlog, não implementado".
 
 | ID | Nome | C1 | C2 | C3 | C4 | VF (critérios atendidos) |
 |---|---|---|---|---|---|---|
@@ -112,3 +112,4 @@ fora do MVP em [3. MVP e Escopo](/requisitos/mvp.md).
 | 2026-09-15 | 1.0 | Criação das regras de negócio e da tabela de priorização com cálculo de valor final | Nayra |
 | 2026-09-16 | 2.0 | Unificação com a Matriz de Esforço em uma única página; adição da tabela de justificativa de valor (C1-C4); matriz reconstruída como tabela HTML colorida | Nayra |
 | 2026-09-16 | 2.1 | Atribuição de IDs (UC04-UC08) aos itens de backlog, antes sem identificação | Nayra |
+| 2026-09-16 | 2.2 | Atualização da referência: UC04-UC08 agora têm casos de uso completos na seção 6 | Nayra |
