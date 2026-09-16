@@ -1,4 +1,4 @@
-# 7. Visão de Arquitetura
+# 8. Visão de Arquitetura
 
 ## Fluxo geral
 
@@ -73,3 +73,9 @@
 - **Cache de feriados em memória, por ano**: evita bater na API pública a cada
   consulta de disponibilidade. Não foi usado um cache externo (Redis) por não haver
   volume que justifique essa complexidade adicional no escopo do MVP.
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Documentação inicial da arquitetura e decisões de projeto | Nayra |

@@ -179,3 +179,9 @@
 </svg>
 
 **Legenda:** 🔵 azul = estados intermediários do fluxo · 🟢 verde = estado de sucesso · 🔴 vermelho = estados de bloqueio/erro · linha tracejada = tentativa de recuperação
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Criação dos casos de uso UC01, UC02 e UC03 com diagramas | Nayra |

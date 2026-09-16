@@ -57,3 +57,9 @@ hipotético definido pelo escopo do teste técnico original. Os interesses descr
 acima foram inferidos a partir do contexto do problema (comunicação por WhatsApp,
 volume de mensagens, necessidade de validação automática) — não de entrevistas reais.
 Isso é uma limitação intencional deste documento, coerente com a origem do projeto.
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Criação do mapa de stakeholders | Nayra |

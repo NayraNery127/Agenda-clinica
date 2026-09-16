@@ -25,3 +25,9 @@ pela interface são efetivamente salvos no PostgreSQL, com data, horário e nome
 paciente corretos.
 
 ![Agendamentos salvos via API](img/api-agendamentos-salvos.png)
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Adição das evidências iniciais de funcionamento do sistema | Nayra |

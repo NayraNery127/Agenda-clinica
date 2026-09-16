@@ -1,4 +1,4 @@
-# Requisitos Não-Funcionais
+# 5. Requisitos Não-Funcionais
 
 | ID | Descrição | Categoria |
 |---|---|---|
@@ -9,3 +9,9 @@
 | RNF05 | A regra de negócio mais sensível a erro (cálculo de dia útil) deve ter cobertura de teste automatizado | Manutenibilidade |
 | RNF06 | O código deve ser tipado de ponta a ponta (TypeScript no frontend e no backend) para reduzir erros em tempo de execução | Manutenibilidade |
 | RNF07 | A interface deve fornecer feedback visual imediato (carregando, sucesso, erro) para toda ação do usuário | Usabilidade |
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Levantamento inicial dos requisitos não-funcionais | Nayra |

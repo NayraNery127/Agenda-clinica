@@ -1,4 +1,4 @@
-# MVP e Escopo
+# 3. MVP e Escopo
 
 ## O que está no MVP
 
@@ -30,3 +30,9 @@ humana:
 1. Ver quais horários estão livres em uma data válida
 2. Criar um agendamento em um desses horários
 3. Receber confirmação imediata de que o agendamento foi salvo
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Definição inicial do escopo do MVP | Nayra |

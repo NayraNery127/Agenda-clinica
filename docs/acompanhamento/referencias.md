@@ -18,3 +18,9 @@ Fontes técnicas e documentação oficial consultadas durante o desenvolvimento.
   [docsify.js.org](https://docsify.js.org)
 - MDN Web Docs — referência sobre `Date`, fuso horário e a Fetch API.
   [developer.mozilla.org](https://developer.mozilla.org)
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Levantamento inicial das referências bibliográficas | Nayra |

@@ -48,6 +48,6 @@ Causas associadas:
 
 ## Histórico de Versão
 
-| Data | Versão | Descrição da Alteração |
-|---|---|---|
-| 2026-09-15 | 1.0 | Criação do documento, estruturação do cenário atual e problema |
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Criação do documento, estruturação do cenário atual e problema | Nayra |

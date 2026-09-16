@@ -1,4 +1,4 @@
-# Requisitos Funcionais
+# 4. Requisitos Funcionais
 
 | ID | Descrição | Prioridade |
 |---|---|---|
@@ -20,3 +20,9 @@ RF02–RF05 e RF09 derivam diretamente do problema central descrito em
 [Cenário Atual e Negócio](cenario-atual.md) (dependência de checagem manual de
 feriados/finais de semana). RF08 deriva do desafio de concorrência listado no
 mesmo documento.
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Levantamento inicial dos requisitos funcionais | Nayra |

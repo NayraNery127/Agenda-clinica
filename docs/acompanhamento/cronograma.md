@@ -22,3 +22,9 @@ implementação (fases 2–7) — o inverso da ordem ideal em um processo real d
 Engenharia de Software. Isso é reconhecido intencionalmente: o objetivo aqui foi
 demonstrar a capacidade de aplicar o raciocínio de requisitos a um sistema já
 existente, não simular um processo que não ocorreu.
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Criação do cronograma de fases do projeto | Nayra |

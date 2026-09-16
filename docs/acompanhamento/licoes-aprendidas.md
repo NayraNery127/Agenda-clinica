@@ -49,3 +49,9 @@ o processo real, erros incluídos.
   isso não converge nunca. O padrão que funcionou foi uma branch por tarefa concreta
   (`fix/mensagem-confirmacao`, `feature/estilo-visual`), que nasce, é mesclada, e
   "morre".
+
+## Histórico de Versão
+
+| Data | Versão | Descrição da Alteração | Autor(a) |
+|---|---|---|---|
+| 2026-09-15 | 1.0 | Registro inicial das lições aprendidas durante o desenvolvimento | Nayra |
