@@ -2,10 +2,14 @@
 
 ## Diagrama de Casos de Uso
 
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
-  <!-- Fronteira do sistema -->
+<svg viewBox="0 0 950 460" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+  <!-- Fronteira do sistema (MVP) -->
   <rect x="180" y="20" width="340" height="380" rx="12" fill="#fafafa" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4"/>
-  <text x="350" y="45" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#64748b">Agenda Clínica</text>
+  <text x="350" y="45" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#64748b">Agenda Clínica — MVP</text>
+
+  <!-- Fronteira do backlog -->
+  <rect x="560" y="20" width="360" height="380" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4"/>
+  <text x="740" y="45" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94a3b8">Backlog (fora do MVP)</text>
 
   <!-- Ator Paciente (stick figure) -->
   <g stroke="#1e3a8a" stroke-width="2" fill="none">
@@ -27,7 +31,7 @@
   </g>
   <text x="60" y="388" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#166534">Recepção</text>
 
-  <!-- Use cases (ellipses) -->
+  <!-- Use cases do MVP (ellipses) -->
   <ellipse cx="360" cy="90" rx="140" ry="32" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
   <text x="360" y="94" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">UC01 Consultar horários</text>
 
@@ -37,7 +41,23 @@
   <ellipse cx="360" cy="320" rx="140" ry="32" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
   <text x="360" y="324" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#166534">UC03 Listar agendamentos</text>
 
-  <!-- Linhas de associação -->
+  <!-- Use cases de backlog (ellipses cinzas tracejadas) -->
+  <ellipse cx="740" cy="70" rx="150" ry="28" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="740" y="74" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">UC04 Cancelar agendamento</text>
+
+  <ellipse cx="740" cy="140" rx="150" ry="28" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="740" y="144" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">UC05 Painel administrativo</text>
+
+  <ellipse cx="740" cy="210" rx="150" ry="28" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="740" y="214" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">UC06 Notificar paciente</text>
+
+  <ellipse cx="740" cy="280" rx="150" ry="28" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="740" y="284" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">UC07 Autenticar usuário</text>
+
+  <ellipse cx="740" cy="350" rx="150" ry="28" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="740" y="354" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">UC08 Selecionar profissional</text>
+
+  <!-- Linhas de associação (MVP) -->
   <line x1="90" y1="140" x2="222" y2="95" stroke="#475569" stroke-width="1.5"/>
   <line x1="90" y1="150" x2="222" y2="195" stroke="#475569" stroke-width="1.5"/>
   <line x1="90" y1="290" x2="222" y2="318" stroke="#475569" stroke-width="1.5"/>
@@ -46,6 +66,9 @@
   <line x1="360" y1="122" x2="360" y2="168" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow2)"/>
   <text x="400" y="150" font-family="sans-serif" font-size="10" fill="#64748b">«include»</text>
 
+  <!-- Conector entre as duas fronteiras (indica relação de backlog) -->
+  <line x1="520" y1="210" x2="560" y2="210" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,3"/>
+
   <defs>
     <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
       <path d="M0,0 L0,6 L7,3 z" fill="#94a3b8"/>
@@ -53,7 +76,12 @@
   </defs>
 </svg>
 
-**Legenda:** 🔵 azul = casos de uso do paciente · 🟢 verde = caso de uso da recepção (uso indireto via API) · linha tracejada = dependência entre casos de uso
+**Legenda:** 🔵 azul = casos de uso do paciente · 🟢 verde = caso de uso da recepção (uso indireto via API) · ⬜ cinza tracejado = backlog, não implementado · linha tracejada entre casos de uso = dependência («include»)
+
+Associações de ator para os itens de backlog seguem o mesmo padrão dos já
+implementados (Paciente → UC04, UC06, UC08; Recepção → UC05, UC07) e foram
+omitidas do diagrama para não sobrecarregar a leitura visual — estão detalhadas
+na tabela da seção [7.7](/requisitos/lista-de-itens-de-trabalho.md).
 
 ## UC01 — Consultar horários disponíveis
 
