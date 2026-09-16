@@ -16,16 +16,26 @@
 
 ## Rastreabilidade
 
-| Requisito | Caso de Uso relacionado |
-|---|---|
-| RF01, RF02, RF03, RF04, RF05 | [UC01 — Consultar horários disponíveis](/requisitos/casos-de-uso.md) |
-| RF06, RF07, RF08, RF09 | [UC02 — Criar agendamento](/requisitos/casos-de-uso.md) |
-| RF10, RF11 | [UC03 — Listar agendamentos](/requisitos/casos-de-uso.md) |
+| ID | Nome | ID UC | Objetivo UC | RNFs Relacionados | RNs Relacionadas |
+|---|---|---|---|---|---|
+| RF01 | Consultar disponibilidade | UC01 | Mostrar horários livres numa data | RNF01, RNF02, RNF03 | RN03, RN04, RN05 |
+| RF02 | Consultar feriados | UC01 | Verificar se a data é feriado nacional | RNF03 | RN03 |
+| RF03 | Bloquear feriado | UC01 | Impedir agendamento em feriado | RNF03 | RN03 |
+| RF04 | Bloquear fim de semana | UC01 | Impedir agendamento em sábado/domingo | RNF02 | RN04 |
+| RF05 | Bloquear data passada | UC01 | Impedir agendamento em data já ocorrida | RNF02 | RN05 |
+| RF06 | Informar paciente | UC02 | Capturar identificação de quem agenda | — | — |
+| RF07 | Criar agendamento | UC02 | Persistir agendamento em horário livre | RNF06 | RN01, RN02 |
+| RF08 | Impedir conflito de horário | UC02 | Bloquear dois agendamentos no mesmo horário | — | RN06 |
+| RF09 | Revalidar no backend | UC02 | Repetir toda validação, ignorando o frontend | RNF06 | RN03, RN04, RN05 |
+| RF10 | Listar agendamentos | UC03 | Retornar todos os agendamentos | RNF01 | — |
+| RF11 | Filtrar por data | UC03 | Restringir listagem a uma data | RNF01 | — |
 
 RF02–RF05 e RF09 derivam diretamente do problema central descrito em
 [1. Cenário Atual e Negócio](/requisitos/cenario-atual.md) (dependência de checagem
 manual de feriados/finais de semana). RF08 deriva do desafio de concorrência listado
-no mesmo documento.
+no mesmo documento. As RNs completas estão em
+[7. Lista de Itens de Trabalho](/requisitos/lista-de-itens-de-trabalho.md) e as RNFs
+completas em [5. Requisitos Não-Funcionais](/requisitos/requisitos-nao-funcionais.md).
 
 ## Histórico de Versão
 
@@ -34,3 +44,4 @@ no mesmo documento.
 | 2026-09-15 | 1.0 | Levantamento inicial dos requisitos funcionais | Nayra |
 | 2026-09-16 | 1.1 | Adiciona rastreabilidade explícita com Casos de Uso e corrige link relativo quebrado | Nayra |
 | 2026-09-16 | 1.2 | Adiciona hyperlinks na tabela de rastreabilidade | Nayra |
+| 2026-09-16 | 1.3 | Expande tabela de rastreabilidade para incluir RNFs e RNs relacionadas, no mesmo formato usado no EcoQuest | Nayra |
