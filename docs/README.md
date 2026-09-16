@@ -1,17 +1,17 @@
 # Agenda Clínica
 
 Sistema de agendamento inteligente para clínicas — projeto pessoal full stack, documentado
-com o mesmo rigor de Engenharia de Requisitos aplicado em projetos acadêmicos (EcoQuest),
-mas aqui aplicado a um sistema real, construído do zero.
+com o mesmo rigor de Engenharia de Requisitos aplicado em projetos acadêmicos, mas aqui
+aplicado a um sistema real, construído do zero.
 
 ## Por que este projeto existe
 
 Uma clínica recebe dezenas de mensagens por dia no WhatsApp perguntando por horários
 disponíveis. O atendimento manual desse fluxo consome tempo da equipe e gera erros de
-agendamento (esquecimento de feriados, conflito de horários, falta de padronização).
+agendamento, como esquecimento de feriados, conflito de horários e falta de padronização.
 
-Esta documentação cobre o processo completo: do levantamento do problema até a
-implementação, na mesma ordem que um projeto de Engenharia de Software real seguiria.
+Esta documentação cobre o processo completo, do levantamento do problema até a
+implementação, seguindo a mesma ordem que um projeto real de Engenharia de Software segue.
 
 ## Como navegar
 
@@ -22,11 +22,11 @@ implementação, na mesma ordem que um projeto de Engenharia de Software real se
 ## Metodologia e inspiração
 
 A estrutura de documentação de requisitos (cenário atual, stakeholders, MVP, RFs/RNFs,
-casos de uso) segue o mesmo padrão aplicado no projeto acadêmico **EcoQuest**
-(Engenharia de Requisitos, UnB/FCTE). A organização do site de documentação via
-GitHub Pages, com uma seção dedicada de arquitetura, foi inspirada na documentação
-do projeto **Othala** (MDS, UnB/FCTE). Aqui, essas duas práticas foram combinadas e
-aplicadas a um sistema real construído do zero, fora do contexto acadêmico.
+casos de uso) segue o mesmo padrão aplicado em projetos acadêmicos de Engenharia de
+Requisitos. A organização do site de documentação via GitHub Pages, com uma seção
+dedicada de arquitetura, foi inspirada na documentação do projeto **Othala** (MDS,
+UnB/FCTE). Aqui, essas práticas foram combinadas e aplicadas a um sistema real
+construído do zero, fora do contexto acadêmico.
 
 ## Repositório e execução
 
