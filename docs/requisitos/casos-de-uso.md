@@ -1,4 +1,57 @@
-# Casos de Uso
+# 6. Casos de Uso
+
+## Diagrama de Casos de Uso
+
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+  <!-- Fronteira do sistema -->
+  <rect x="180" y="20" width="340" height="380" rx="12" fill="#fafafa" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4"/>
+  <text x="350" y="45" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#64748b">Agenda Clínica</text>
+
+  <!-- Ator Paciente (stick figure) -->
+  <g stroke="#1e3a8a" stroke-width="2" fill="none">
+    <circle cx="60" cy="130" r="12" fill="#eff6ff"/>
+    <line x1="60" y1="142" x2="60" y2="180"/>
+    <line x1="35" y1="158" x2="85" y2="158"/>
+    <line x1="60" y1="180" x2="40" y2="210"/>
+    <line x1="60" y1="180" x2="80" y2="210"/>
+  </g>
+  <text x="60" y="228" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">Paciente</text>
+
+  <!-- Ator Recepção (stick figure) -->
+  <g stroke="#166534" stroke-width="2" fill="none">
+    <circle cx="60" cy="290" r="12" fill="#f0fdf4"/>
+    <line x1="60" y1="302" x2="60" y2="340"/>
+    <line x1="35" y1="318" x2="85" y2="318"/>
+    <line x1="60" y1="340" x2="40" y2="370"/>
+    <line x1="60" y1="340" x2="80" y2="370"/>
+  </g>
+  <text x="60" y="388" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#166534">Recepção</text>
+
+  <!-- Use cases (ellipses) -->
+  <ellipse cx="360" cy="90" rx="140" ry="32" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="94" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">UC01 Consultar horários</text>
+
+  <ellipse cx="360" cy="200" rx="140" ry="32" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="204" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">UC02 Criar agendamento</text>
+
+  <ellipse cx="360" cy="320" rx="140" ry="32" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="324" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#166534">UC03 Listar agendamentos</text>
+
+  <!-- Linhas de associação -->
+  <line x1="90" y1="140" x2="222" y2="95" stroke="#475569" stroke-width="1.5"/>
+  <line x1="90" y1="150" x2="222" y2="195" stroke="#475569" stroke-width="1.5"/>
+  <line x1="90" y1="290" x2="222" y2="318" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- UC02 depende de UC01 (extends) -->
+  <line x1="360" y1="122" x2="360" y2="168" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow2)"/>
+  <text x="400" y="150" font-family="sans-serif" font-size="10" fill="#64748b">«include»</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
 
 ## UC01 — Consultar horários disponíveis
 
@@ -77,3 +130,48 @@
 1. É feita uma requisição (`GET /appointments`), opcionalmente filtrando por data.
 2. O sistema retorna todos os agendamentos correspondentes, ordenados
    cronologicamente.
+
+---
+
+## Diagrama de Estados — ciclo de uma solicitação de agendamento
+
+<svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+  <defs>
+    <marker id="arrow3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <circle cx="40" cy="150" r="8" fill="#1e293b"/>
+  <line x1="48" y1="150" x2="90" y2="150" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+
+  <rect x="90" y="120" width="140" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">Data Selecionada</text>
+
+  <rect x="290" y="20" width="150" height="60" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="365" y="45" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#991b1b">Bloqueada</text>
+  <text x="365" y="62" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#dc2626">feriado / fds / passada</text>
+
+  <rect x="290" y="120" width="150" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="365" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">Horários Exibidos</text>
+
+  <rect x="500" y="120" width="150" height="60" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="575" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1e3a8a">Horário Escolhido</text>
+
+  <rect x="710" y="120" width="100" height="60" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="760" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#166534">Confirmado</text>
+
+  <rect x="500" y="220" width="150" height="60" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="575" y="245" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#991b1b">Conflito</text>
+  <text x="575" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#dc2626">horário ocupado</text>
+
+  <line x1="230" y1="135" x2="288" y2="55" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="230" y1="150" x2="288" y2="150" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="440" y1="150" x2="498" y2="150" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="650" y1="140" x2="708" y2="140" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="600" y1="180" x2="590" y2="218" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="575" y1="220" x2="575" y2="182" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow3)"/>
+
+  <text x="565" y="200" font-family="sans-serif" font-size="9" fill="#64748b">tenta agendar</text>
+  <text x="530" y="212" font-family="sans-serif" font-size="9" fill="#64748b">tenta outro horário</text>
+</svg>
